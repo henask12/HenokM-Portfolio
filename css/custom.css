@@ -329,3 +329,16 @@ input:-webkit-autofill:focus {
 		overflow: hidden;
 	}
 }
+
+/* Default height for screens smaller than lg breakpoint */
+.img-custom-height {
+	height: 55px;
+  }
+  
+  /* Height for screens at or larger than lg breakpoint */
+  @media (min-width: 1024px) {
+	.img-custom-height {
+	  height: 70px;
+	}
+  }
+  
