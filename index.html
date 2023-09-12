@@ -20,7 +20,7 @@
     <!--=== main css ===-->
     <link rel="stylesheet" href="css/tailwind.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <title>About - Bostami Tailwind CSS Personal Portfolio HTML Template </title>
+    <title>Henok Mekonnen </title>
 
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -44,7 +44,7 @@
             <div class="w-full flex justify-between px-4">
                 <!-- website Logo -->
                 <a href="index.html">
-                    <img class="img-custom-height" src="images/logo/logoooo.png" alt="logo" />
+                    <img class="img-custom-height" src="images/logo/newlogo.png" alt="logo" />
                 </a>
                 <div class="flex items-center">
                     <!-- dark and light mode toggle -->
@@ -181,6 +181,7 @@
                         </div>
                         <!-- personal infomation end-->
                         <!-- dowanload button -->
+                        
                         <button class="dowanload-btn">
                             <img class="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download CV </button>
                     </div>
@@ -313,7 +314,7 @@
                                         <!-- personal info end -->
 
                                         <!-- dowanload button -->
-                                        <button class="dowanload-btn">
+                                        <button class="dowanload-btn" onclick="downloadFile()">
                                             <img class="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download
                                             CV
                                         </button>
@@ -349,7 +350,40 @@
                                     <div class="space-y-2">
                                         <h3 class="dark:text-white text-[22px] font-semibold">Full Stack Web Development</h3>
                                         <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
-                                            Building dynamic web applications using JavaScript, React, Redux, and other modern technologies.
+                                            Building dynamic web applications using JavaScript, React, NextJs, Redux, and other modern technologies.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Front-End Development -->
+                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon2.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Front-End Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Designing responsive and user-friendly interfaces using HTML5, CSS3, and frameworks like Bootstrap and Material UI.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                 <!-- Back-End Development -->
+                                 <div class="about-box bg-[#fff4f4] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon3.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Back-End Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Building server-side logic and databases using .Net, SQL, MySQL, PostgresSql and Ruby on Rails.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Web Development Tools -->
+                                <div class="about-box bg-[#fff0f8] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon4.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Web Development Tools</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Utilizing tools like Git, GitHub, Azure, JIRA, and more for efficient and collaborative development.
                                         </p>
                                     </div>
                                 </div>
@@ -361,39 +395,6 @@
                                         <h3 class="dark:text-white text-[22px] font-semibold">App Development</h3>
                                         <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
                                             Creating mobile applications with a focus on user experience and performance.
-                                        </p>
-                                    </div>
-                                </div>
-                        
-                                <!-- Front-End Development -->
-                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
-                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon2.svg" alt="icon" />
-                                    <div class="space-y-2">
-                                        <h3 class="dark:text-white text-[22px] font-semibold">Front-End Development</h3>
-                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
-                                            Designing responsive and user-friendly interfaces using HTML5, CSS3, and frameworks like Bootstrap and Material UI.
-                                        </p>
-                                    </div>
-                                </div>
-                        
-                                <!-- Back-End Development -->
-                                <div class="about-box bg-[#fff4f4] dark:bg-transparent">
-                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon3.svg" alt="icon" />
-                                    <div class="space-y-2">
-                                        <h3 class="dark:text-white text-[22px] font-semibold">Back-End Development</h3>
-                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
-                                            Building server-side logic and databases using .Net, SQL, MySQL, and Ruby on Rails.
-                                        </p>
-                                    </div>
-                                </div>
-                        
-                                <!-- Web Development Tools -->
-                                <div class="about-box bg-[#fff0f8] dark:bg-transparent">
-                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon4.svg" alt="icon" />
-                                    <div class="space-y-2">
-                                        <h3 class="dark:text-white text-[22px] font-semibold">Web Development Tools</h3>
-                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
-                                            Utilizing tools like Git, GitHub, Azure, JIRA, and more for efficient and collaborative development.
                                         </p>
                                     </div>
                                 </div>
@@ -413,11 +414,11 @@
                         
 
                         <!-- what i do section start -->
-                        <div class="px-2 sm:px-5 md:px-10 lg:px-14">
+                        <!-- <div class="px-2 sm:px-5 md:px-10 lg:px-14">
                             <div class="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto py-10 rounded-xl">
-                                <h3 class="text-center dark:text-white text-6xl mb-3 font-semibold"> Clients </h3>
+                                <h3 class="text-center dark:text-white text-6xl mb-3 font-semibold"> Clients </h3> -->
                                 <!-- slider and slider items -->
-                                <div class="slickOne text-center px-2 pt-8">
+                                <!-- <div class="slickOne text-center px-2 pt-8">
                                     <div>
                                         <img class="overflow-hidden brand-img" src="images/slider/brand.png"
                                             alt="brand icon" />
@@ -446,10 +447,10 @@
                                         <img class="overflow-hidden brand-img" src="images/slider/brand1.png"
                                             alt="brand icon" />
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- slider and slider items end -->
-                            </div>
-                        </div>
+                            <!-- </div>
+                        </div> -->
 
                         <!-- footer start -->
                         <footer class="overflow-hidden rounded-b-2xl" style="background: transparent;">
@@ -466,6 +467,29 @@
     </div>
     <!-- End bgHomeBg -->
 
+    <script>
+        function downloadFile() {
+            debugger
+          // Create a hidden anchor element
+          var anchor = document.createElement("a");
+          anchor.style.display = "none";
+      
+          // Set the href attribute to the file you want to download
+          anchor.href = "https://docs.google.com/document/d/1Ls4nopxlJdFLq19dTBUSH9kDqvlSxG3-rFqUI_TJI3E/export?format=pdf";
+      
+          // Set the download attribute with the desired file name
+          anchor.download = "HenokM.pdf";
+      
+          // Append the anchor element to the document body
+          document.body.appendChild(anchor);
+      
+          // Trigger a click event on the anchor element
+          anchor.click();
+      
+          // Clean up after the download
+          document.body.removeChild(anchor);
+        }
+      </script>
 
     <!--==== js =====-->
     <script src="js/vendor/jquary.min.js"></script>
