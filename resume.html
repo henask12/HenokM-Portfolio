@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/logo/hlogo.icp" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo/hlogo.ico" type="image/x-icon">
     <title>Henok Mekonnen</title>
     <!--=== fontaswesome ===-->
     <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
@@ -19,6 +19,8 @@
     <!--=== main css ===-->
     <link rel="stylesheet" href="css/tailwind.css" />
     <link rel="stylesheet" href="css/custom.css" />
+     <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/slick.css" />
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -41,7 +43,7 @@
         <div class="section-bg">
             <div class="w-full flex justify-between px-4">
                 <a href="index.html">
-                    <img class="h-[26px] lg:h-[32px]" src="images/logo/newlogo.png" alt="logo" />
+                    <img class="img-custom-height" src="images/logo/newlogo.png" alt="logo" />
                 </a>
                 <div class="flex items-center">
                     <!-- dark and light mode toggle -->
