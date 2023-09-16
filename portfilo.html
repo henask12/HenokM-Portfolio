@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from bostamihtml.ibthemespro.com/portfilo.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 11:21:00 GMT -->
-
 <head>
     <!-- common meta tags -->
     <meta charset="UTF-8" />
@@ -23,6 +20,9 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/tailwind.css" />
     <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="stylesheet" type="text/css" href="css/vendor/slick.css" />
+
     <script>
         // On page load or when changing themes, best to add inline in `head` to avoid FOUC
         if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -45,7 +45,7 @@
             <div class="w-full flex justify-between px-4">
                 <!-- website Logo -->
                 <a href="index.html">
-                    <img class="h-[26px] lg:h-[32px]" src="images/logo/logo.png" alt="logo" />
+                    <img class="img-custom-height" src="images/logo/newlogo.png" alt="logo" />
                 </a>
                 <div class="flex items-center">
                     <!-- dark and light mode toggle -->
