@@ -29,6 +29,19 @@
             document.documentElement.classList.remove("dark");
         }
     </script>
+    <style>
+        .subskills,
+        .subskills-back,
+        .subskills-cloud,
+        .subskills-version,
+        .subskills-project,
+        .subskills-deploy,
+        .subskills-test,
+        .subskills-debug,
+        .subskills-profesional {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -245,25 +258,6 @@
                                         <h3 class="text-xl dark:text-white"> Degree, Bachelor of Information System </h3>
                                         <p class="dark:text-[#b7b7b7]">Addis Ababa University</p>
                                     </div>
-                                        <!-- <div
-                                            class="bg-[#fff4f4] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2021-2023</span>
-                                            <h3 class="text-xl dark:text-white"> Ph.D in Horriblensess </h3>
-                                            <p class="dark:text-[#b7b7b7]"> ABC University, Los Angeles, CA </p>
-                                        </div>
-                                        <div
-                                            class="bg-[#fff1fb] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2019 -
-                                                Present</span>
-                                            <h3 class="text-xl dark:text-white"> Sr. Software Tester </h3>
-                                            <p class="dark:text-[#b7b7b7]">Google Inc.</p>
-                                        </div>
-                                        <div
-                                            class="py-4 pl-5 bg-[#fff4f4] dark:bg-transparent pr-3 space-y-2 rounded-lg dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2021</span>
-                                            <h3 class="text-xl dark:text-white">Best Developer</h3>
-                                            <p class="dark:text-[#b7b7b7]"> University Of Melbourne, NA </p>
-                                        </div> -->
                                     </div>
                                     <!-- eductation end -->
 
@@ -285,24 +279,7 @@
                                         <h3 class="text-xl dark:text-white"> Senior Developer </h3>
                                         <p class="dark:text-[#b7b7b7]">Ethiopian Airlines, Addis Ababa, Ethiopia</p>
                                     </div>
-                                        <!-- <div
-                                            class="py-4 pl-5 pr-3 space-y-2 mb-6 rounded-lg bg-[#eef5fa] dark:bg-transparent dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2017-2021</span>
-                                            <h3 class="text-xl dark:text-white"> Computer Science </h3>
-                                            <p class="dark:text-[#b7b7b7]"> Imperialize Technical Institute </p>
-                                        </div>
-                                        <div
-                                            class="bg-[#f2f4ff] dark:bg-transparent py-4 pl-5 pr-3 space-y-2 rounded-lg mb-6 dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2015-2017</span>
-                                            <h3 class="text-xl dark:text-white"> Cr. Web Developer </h3>
-                                            <p class="dark:text-[#b7b7b7]">ib-themes ltd.</p>
-                                        </div>
-                                        <div
-                                            class="py-4 bg-[#eef5fa] dark:bg-transparent pl-5 pr-3 space-y-2 rounded-lg dark:border-[#212425] dark:border-2">
-                                            <span class="text-tiny text-gray-lite dark:text-[#b7b7b7]">2008</span>
-                                            <h3 class="text-xl dark:text-white">Best Writter</h3>
-                                            <p class="dark:text-[#b7b7b7]"> Online Typodev Soluation Ltd. </p>
-                                        </div> -->
+                                      
                                     </div>
                                     <!-- experiment start -->
                                 </div>
@@ -323,26 +300,13 @@
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#FF6464] h-1 rounded-full" style="width: 100%"></div>
                                         </div>
-                                        <div class="subskills hidden"> 
-                                                <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
-                                                    <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
-                                                        <button class="resume-btn">JavaScript</button>
-                                                        <button class="resume-btn">React</button>
-                                                        <button class="resume-btn">Redux</button>
-                                                        <button class="resume-btn">jQuery</button>
-                                                        <button class="resume-btn">HTML5</button>
-                                                        <button class="resume-btn">CSS3</button>
-                                                        <button class="resume-btn">Bootstrap</button>
-                                                        <button class="resume-btn">Material UI</button>
-                                                        <button class="resume-btn">PrimeReact</button>
-                                                        <button class="resume-btn">Tailwind CSS</button>
-                                                    </div>
-                                        </div>
+                                        
                                     </div>
 
                                     <div class="mb-5">
                                         <div class="flex justify-between mb-1">
                                             <span class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Back-End Development</span>
+                                            <button class="toggle-button-back">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#9272d4] h-1 rounded-full" style="width: 100%"></div>
@@ -353,6 +317,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Cloud Services</span>
+                                                <button class="toggle-button-cloud">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#5185d4] h-1 rounded-full" style="width: 100%"></div>
@@ -362,16 +327,8 @@
                                     <div class="mb-5">
                                         <div class="flex justify-between mb-1">
                                             <span
-                                                class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Mobile/Responsive Development</span>
-                                        </div>
-                                        <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                            <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
-                                        </div>
-                                    </div>
-                                    <div class="mb-5">
-                                        <div class="flex justify-between mb-1">
-                                            <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Version Control</span>
+                                                <button class="toggle-button-version">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -381,6 +338,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Project Management</span>
+                                                <button class="toggle-button-project">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -390,6 +348,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Deployment and Hosting</span>
+                                                <button class="toggle-button-deploy">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -399,6 +358,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Test-Driven Development (TDD)</span>
+                                                <button class="toggle-button-test">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -408,6 +368,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Debugging</span>
+                                                <button class="toggle-button-test">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -417,6 +378,7 @@
                                         <div class="flex justify-between mb-1">
                                             <span
                                                 class=" font-semibold text-[#526377] dark:text-[#A6A6A6]">Professionalism</span>
+                                                <button class="toggle-button-profesional">+</button>
                                         </div>
                                         <div class="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
                                             <div class="bg-[#ca56f2] h-1 rounded-full" style="width: 100%"></div>
@@ -424,37 +386,89 @@
                                     </div>
                                 </div>
 
-                                <!-- <div class="col-span-1">
+                                <div class="subskills hidden col-span-1"> 
                                     <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
-                                    <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
-                                        <button class="resume-btn">JavaScript</button>
-                                        <button class="resume-btn">React</button>
-                                        <button class="resume-btn">Redux</button>
-                                        <button class="resume-btn">jQuery</button>
-                                        <button class="resume-btn">HTML5</button>
-                                        <button class="resume-btn">CSS3</button>
-                                        <button class="resume-btn">Bootstrap</button>
-                                        <button class="resume-btn">Material UI</button>
-                                        <button class="resume-btn">PrimeReact</button>
-                                        <button class="resume-btn">Tailwind CSS</button>
-                                        <button class="resume-btn">.NET</button>
-                                        <button class="resume-btn">Ruby on Rails</button>
-                                        <button class="resume-btn">Node.js</button>
-                                        <button class="resume-btn">Express.js</button>
-                                        <button class="resume-btn">SQL</button>
-                                        <button class="resume-btn">PostgreSql</button>
-                                        <button class="resume-btn">Git</button>
-                                        <button class="resume-btn">GitHub</button>
-                                        <button class="resume-btn">GitLab</button>
-                                        <button class="resume-btn">Azure</button>
-                                        <button class="resume-btn">Heroku</button>
-                                        <button class="resume-btn">Netlify</button>
-                                        <button class="resume-btn">JIRA</button>
-                                        <button class="resume-btn">Remote Pair-Programming</button>
-                                        <button class="resume-btn">Teamwork</button>
-                                        <button class="resume-btn">Mentoring</button>
-                                    </div>
-                                </div> -->
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">JavaScript</button>
+                                            <button class="resume-btn">React</button>
+                                            <button class="resume-btn">Redux</button>
+                                            <button class="resume-btn">jQuery</button>
+                                            <button class="resume-btn">HTML5</button>
+                                            <button class="resume-btn">CSS3</button>
+                                            <button class="resume-btn">Bootstrap</button>
+                                            <button class="resume-btn">Material UI</button>
+                                            <button class="resume-btn">PrimeReact</button>
+                                            <button class="resume-btn">Tailwind CSS</button>
+                                        </div>
+                                </div>
+                                <div class="subskills-back hidden-back col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">.Net</button>
+                                            <button class="resume-btn">Ruby on Rails</button>
+                                            <button class="resume-btn">SQL</button>
+                                            <button class="resume-btn">PostgresSql</button>
+                                            <button class="resume-btn">Nodejs</button>
+                                            <button class="resume-btn">ExpressJs</button>
+                                        </div>
+                                </div>
+
+                                <div class="subskills-cloud hidden-cloud col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Azure</button>
+                                        </div>
+                                </div>
+                                <div class="subskills-version hidden-version col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Git</button>
+                                            <button class="resume-btn">Github</button>
+                                            <button class="resume-btn">Gitlab</button>
+                                        </div>
+                                </div>
+                                
+                                <div class="subskills-project hidden-project col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Azure</button>
+                                            <button class="resume-btn">Github</button>
+                                            <button class="resume-btn">Jira</button>
+                                        </div>
+                                </div>
+
+                                <div class="subskills-deploy hidden-deploy col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Azure</button>
+                                            <button class="resume-btn">Heroku</button>
+                                            <button class="resume-btn">Netlify</button>
+                                        </div>
+                                </div>
+
+                                <div class="subskills-test hidden-test col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Jest</button>
+                                            <button class="resume-btn">Rspec</button>
+                                        </div>
+                                </div>
+
+                                <div class="subskills-debug hidden-debug col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                        </div>
+                                </div>
+
+                                <div class="subskills-profesional hidden-profesional col-span-1"> 
+                                    <h4 class="text-5xl dark:text-white font-medium mb-8"> Knowledges </h4>
+                                        <div class="flex gap-y-3 gap-x-2.5 flex-wrap">
+                                            <button class="resume-btn">Remote Pair-Programming</button>
+                                            <button class="resume-btn">Teamwork</button>
+                                            <button class="resume-btn">Mentoring</button>
+                                        </div>
+                                </div>
+
                             </div>
                         </div>
                         <!-- working section end -->
@@ -473,15 +487,80 @@
         </div>
     </div>
     <script>
-        const toggleButtons = document.querySelectorAll(".toggle-button");
+        function toggleSkills(className) {
+            const skills = document.querySelector(`.${className}`);
+            if (skills.style.display === 'none' || skills.style.display === '') {
+                skills.style.display = 'block';
+            } else {
+                skills.style.display = 'none';
+            }
+        }
 
+        // Add event listeners for all toggle buttons
+        const toggleButtons = document.querySelectorAll('.toggle-button');
         toggleButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                const subskills = button.nextElementSibling;
-                subskills.classList.toggle("hidden");
-                button.textContent = subskills.classList.contains("hidden") ? "+" : "-";
+            button.addEventListener('click', function() {
+                toggleSkills('subskills');
             });
         });
+
+        const toggleButtonsBack = document.querySelectorAll('.toggle-button-back');
+        toggleButtonsBack.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-back');
+            });
+        });
+
+        const toggleButtonsCloud = document.querySelectorAll('.toggle-button-cloud');
+        toggleButtonsCloud.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-cloud');
+            });
+        });
+
+        const toggleButtonsVersion = document.querySelectorAll('.toggle-button-version');
+        toggleButtonsVersion.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-version');
+            });
+        });
+
+        const toggleButtonsProject = document.querySelectorAll('.toggle-button-project');
+        toggleButtonsProject.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-project');
+            });
+        });
+
+        const toggleButtonsDeploy = document.querySelectorAll('.toggle-button-deploy');
+        toggleButtonsDeploy.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-deploy');
+            });
+        });
+
+        const toggleButtonsTest = document.querySelectorAll('.toggle-button-test');
+        toggleButtonsTest.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-test');
+            });
+        });
+
+        const toggleButtonsDebug = document.querySelectorAll('.toggle-button-debug');
+        toggleButtonsDebug.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-debug');
+            });
+        });
+        const toggleButtonsProfesional = document.querySelectorAll('.toggle-button-profesional');
+        toggleButtonsProfesional.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleSkills('subskills-profesional');
+            });
+        });
+
+        // Add event listeners for other toggle buttons in the same way
+
     </script>
     <!--==== js =====-->
     <script src="js/vendor/jquary.min.js"></script>
