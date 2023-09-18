@@ -234,7 +234,7 @@
                         </h3>
                         
 
-                        <form action="https://formspree.io/f/mvojqykl" method="POST">
+                        <form id="myForm" action="https://formspree.io/f/mvojqykl" method="POST">
                             <div class="returnmessage"
                                 data-success="Your message has been received, We will contact you soon."></div>
                             <div class="empty_notice">
@@ -292,7 +292,26 @@
     </div>
     <!-- js -->
 
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get a reference to the form
+            const form = document.getElementById("myForm");
 
+            // Add a submit event listener to the form
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Send the form data to the server (You may use AJAX or fetch here)
+
+                // Display an autoresponse message
+                const returnMessage = document.querySelector(".returnmessage");
+                returnMessage.innerHTML = "Your message has been received. We will contact you soon.";
+
+                // Clear the form fields
+                form.reset();
+            });
+        });
+    </script> -->
     <script src="js/vendor/jquary.min.js"></script>
     <!--=== main js ===-->
     <script src="js/main.js"></script>
