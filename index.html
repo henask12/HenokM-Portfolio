@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- commom meta tag -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/logo/hlogo.ico" type="image/x-icon">
+    <!--=== fontaswesome ===-->
+    <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="css/vendor/slick.css" />
+    <!--=== main css ===-->
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Henok Mekonnen </title>
+
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem("color-theme") === "dark" || (!("color-theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="loader_line"></div>
+    </div>
+    <!-- /PRELOADER -->
+
+    <div class="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
+        <div class="section-bg">
+            <div class="w-full flex justify-between px-4">
+                <!-- website Logo -->
+                <a href="index.html">
+                    <img class="img-custom-height" src="images/logo/newlogo.png" alt="logo" />
+                </a>
+                <div class="flex items-center">
+                    <!-- dark and light mode toggle -->
+                    <button id="theme-toggle" type="button" class="dark-light-btn">
+                        <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
+                        <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                    </button>
+                    <!-- mobile toggle button -->
+                    <button id="menu-toggle" type="button" class="menu-toggle-btn">
+                        <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
+                        <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile menu start -->
+        <nav id="navbar" class="hidden lg:hidden">
+            <ul
+                class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
+                <li>
+                    <a class="mobile-menu-items-active" href="index.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-user"></i>
+                        </span>About </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="resume.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </span>Resume </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="portfilo.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fas fa-briefcase"></i>
+                        </span>Works </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="blog.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-brands fa-blogger"></i>
+                        </span>Blogs </a>
+                </li>
+                <li>
+                    <a class="mobile-menu-items" href="contact.html">
+                        <span class="mr-2 text-xl">
+                            <i class="fa-solid fa-address-book"></i>
+                        </span> Contact </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- mobile menu end -->
+
+        <div class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
+            <!-- sidber personal info -->
+            <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+                <div
+                    class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                    <!-- profile image -->
+                    <img src="images/about/my avatar.jpg"
+                        class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+                        alt="about" />
+                    <div class="pt-[100px] pb-8">
+                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Henok Mekonnen </h2>
+                        <h3
+                            class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
+                            Full Stack Web Devloper</h3>
+                        <div class="flex justify-center space-x-3">
+                            <!-- facebook icon and link -->
+                            <a href="https://www.facebook.com/henok.mekonnen5030" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1773EA]">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </span>
+                            </a>
+                            <!-- twitter icon and link -->
+                            <a href="https://twitter.com/hmekonnen3" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </span>
+                            </a>
+                            <!-- dribbble icon and link -->
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#e14a84]">
+                                    <i class="fa-brands fa-dribbble"></i>
+                                </span>
+                            </a>
+                            <!-- linkedin icon and link -->
+                            <a href="https://www.linkedin.com/henokmekonnen1" target="_blank" rel="noopener noreferrer">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <!-- personal infomation start -->
+                        <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md">
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Phone </p>
+                                    <p class="dark:text-white">+251917253752</p>
+                                </div>
+                            </div>
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
+                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
+                                    <p class="dark:text-white">henokmekonnen5@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Location </p>
+                                    <p class="dark:text-white">Addis Ababa, Ethiopia</p>
+                                </div>
+                            </div>
+                            <div class="flex py-2.5">
+                                <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </span>
+                                <div class="text-left ml-2.5">
+                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Birthday </p>
+                                    <p class="dark:text-white">August 06, 1997</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- personal infomation end-->
+                        <!-- dowanload button -->
+                        
+                        <button class="dowanload-btn">
+                            <a href="cv/Henok%20Mekonnen%20Resume.pdf" download="Henok_Mekonnen_Resume.pdf">
+                                 Download CV
+                            </a> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-12 lg:col-span-8">
+                <!-- header for mobile devices start -->
+                <header
+                    class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
+                    <nav class="hidden lg:block">
+                        <ul class="flex">
+                            <li> <a class="menu-active" href="index.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-user"></i>
+                                    </span> About </a></li>
+                            <li> <a class="menu-item" href="resume.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-regular fa-file-lines"></i>
+                                    </span> Resume </a></li>
+                            <li> <a class="menu-item" href="portfilo.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fas fa-briefcase"></i>
+                                    </span> Works </a></li>
+                            <li><a class="menu-item" href="blog.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-brands fa-blogger"></i>
+                                    </span> Blogs </a></li>
+                            <li> <a class="menu-item" href="contact.html">
+                                    <span class="text-xl mb-1">
+                                        <i class="fa-solid fa-address-book"></i>
+                                    </span> Contact </a></li>
+                        </ul>
+                    </nav>
+                </header>
+                <!-- header for mobile devices end -->
+
+                <!-- about me section start -->
+                <div>
+                    <div class="lg:rounded-2xl bg-white dark:bg-[#111111]">
+                        <div class="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                            <!-- about page title -->
+                            <h2 class="after-effect after:left-52">About Me</h2>
+                            <!-- personal info for mobile devices start -->
+                            <div class="lg:hidden">
+                                <div
+                                    class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                                    <!-- profile image  -->
+                                    <img src="images/about/my avatar.jpg"
+                                        class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+                                        alt="about" />
+                                    <div class="pt-[100px] pb-8">
+                                        <h2 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Henok Mekonnen
+                                        </h2>
+                                        <h3
+                                            class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
+                                            Full Stack Web Developer </h3>
+
+                                        <div class="flex justify-center space-x-3">
+                                            <!-- facebook icon and link -->
+                                            <a href="https://www.facebook.com/henok.mekonnen5030" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1773EA]">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </span>
+                                            </a>
+                                            <!-- twitter icon and link -->
+                                            <a href="https://twitter.com/hmekonnen3" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#1C9CEA]">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </span>
+                                            </a>
+                                            <!-- dribbble icon and link -->
+                                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#e14a84]">
+                                                    <i class="fa-brands fa-dribbble"></i>
+                                                </span>
+                                            </a>
+                                            <!-- linkedin icon and link -->
+                                            <a href="https://www.linkedin.com/henokmekonnen1" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span class="socialbtn text-[#0072b1]">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </span>
+                                            </a>
+                                        </div>
+
+                                        <!-- personal info start -->
+                                        <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md">
+                                                    <i class="fa-solid fa-mobile-screen-button"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Phone </p>
+                                                    <p class="dark:text-white">+251917253752</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
+                                                    <i class="fa-solid fa-envelope-open-text"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
+                                                    <p class="dark:text-white">henokmekonnen5@gmail.com</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md">
+                                                    <i class="fa-solid fa-location-dot"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Location </p>
+                                                    <p class="dark:text-white">Addis Ababa, Ethiopia </p>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex py-2.5">
+                                                <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
+                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                </span>
+                                                <div class="text-left ml-2.5">
+                                                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Birthday </p>
+                                                    <p class="dark:text-white">August 06, 1997</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- personal info end -->
+
+                                        <!-- dowanload button -->
+                                        <button class="dowanload-btn" onclick="downloadFile()">
+                                            <img class="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download
+                                            CV
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- personal info for mobile devices end -->
+
+                            <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+                                <div class="col-span-12 space-y-2.5">
+                                    <div class="lg:mr-16">
+                                        <p class="text-[#44566c] dark:text-color-910 leading-7">I am a Full-stack developer with 4+ years of experience 
+                                            specializing crafting robust software solutions. 
+                                            y expertise spans both the front-end and back-end domains, 
+                                            and I thrive in collaborating with diverse teams to ensure the successful execution of projects.
+                                        </p>
+                                        <p class="text-[#44566c] leading-7 mt-2.5 dark:text-color-910">  My passion extends to keeping abreast of emerging trends and continuously refining development methodologies.
+                                             My commitment to innovation and excellence drives me to deliver exceptional outcomes.</p>
+                                    </div>
+                                    <div></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- what i do section start -->
+                        <div class="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                            <h3 class="text-[35px] dark:text-white font-bold font-robotoSlab pb-5">What I Do!</h3>
+                            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+                                <!-- Full Stack Web Development -->
+                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Full Stack Web Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Building dynamic web applications using JavaScript, React, NextJs, Redux, and other modern technologies.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <!-- Front-End Development -->
+                                <div class="about-box bg-[#fcf4ff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon2.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Front-End Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Designing responsive and user-friendly interfaces using HTML5, CSS3, and frameworks like Bootstrap and Material UI.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                 <!-- Back-End Development -->
+                                 <div class="about-box bg-[#fff4f4] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon3.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Back-End Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Building server-side logic and databases using .Net, SQL, MySQL, PostgresSql and Ruby on Rails.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Web Development Tools -->
+                                <div class="about-box bg-[#fff0f8] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon4.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Web Development Tools</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Utilizing tools like Git, GitHub, Azure, JIRA, and more for efficient and collaborative development.
+                                        </p>
+                                    </div>
+                                </div>
+                        
+                                <!-- App Development -->
+                                <div class="about-box bg-[#fefaf0] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon1.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">App Development</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Creating mobile applications with a focus on user experience and performance.
+                                        </p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Digital Marketing and SEO -->
+                                <div class="about-box bg-[#f3faff] dark:bg-transparent">
+                                    <img class="w-10 h-10 object-contain block" src="images/icons/icon5.svg" alt="icon" />
+                                    <div class="space-y-2">
+                                        <h3 class="dark:text-white text-[22px] font-semibold">Digital Marketing and SEO</h3>
+                                        <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                                            Enhancing online presence through digital marketing, SEO strategies, and Google Ads campaigns.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- footer start -->
+                        <footer class="overflow-hidden rounded-b-2xl" style="background: transparent;">
+                            <p class="text-center py-6 text-gray-lite dark:text-color-910"> © 2023 All Rights Reserved
+                                by <a class="hover:text-[#FA5252] duration-300 transition" href="#" target="_blank"
+                                    rel="noopener noreferrer">Henok Mekonnen</a>. </p>
+                        </footer>
+                        <!-- footer section end -->
+                    </div>
+                </div>
+                <!-- about me section start -->
+            </div>
+        </div>
+    </div>
+    <!-- End bgHomeBg -->
+
+    <script>
+        function downloadFile() {
+            debugger
+          // Create a hidden anchor element
+          var anchor = document.createElement("a");
+          anchor.style.display = "none";
+      
+          // Set the href attribute to the file you want to download
+          anchor.href = "https://docs.google.com/document/d/1Ls4nopxlJdFLq19dTBUSH9kDqvlSxG3-rFqUI_TJI3E/export?format=pdf";
+      
+          // Set the download attribute with the desired file name
+          anchor.download = "HenokM.pdf";
+      
+          // Append the anchor element to the document body
+          document.body.appendChild(anchor);
+      
+          // Trigger a click event on the anchor element
+          anchor.click();
+      
+          // Clean up after the download
+          document.body.removeChild(anchor);
+        }
+      </script>
+
+    <!--==== js =====-->
+    <script src="js/vendor/jquary.min.js"></script>
+    <script src="js/vendor/slick.js"></script>
+    <!-- main js -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
