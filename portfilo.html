@@ -1,237 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- common meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/logo/hlogo.ico"
+      type="image/x-icon"
+    />
 
-<head>
-  <!-- common meta tags -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="images/logo/hlogo.ico" type="image/x-icon">
+    <!--=== fontaswesome ===-->
+    <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!--=== owl carousel css === -->
+    <link rel="stylesheet" href="css/vendor/jquery.modal.min.css" />
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Henok Mekonnen</title>
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
 
-  <!--=== fontaswesome ===-->
-  <link rel="stylesheet" href="assets/fontaswesome/css/all.min.css" />
-  <link rel="stylesheet" href="assets/fontaswesome/css/fontawesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com/" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Roboto+Slab:wght@300;400;500;600;700&amp;display=swap"
-    rel="stylesheet" />
-  <!--=== owl carousel css === -->
-  <link rel="stylesheet" href="css/vendor/jquery.modal.min.css" />
-  <link rel="stylesheet" href="css/tailwind.css" />
-  <link rel="stylesheet" href="css/custom.css" />
-  <title>
-      Henok Mekonnen
-  </title>
-  <script>
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (
-      localStorage.getItem("color-theme") === "dark" ||
-      (!("color-theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  </script>
-</head>
+  <body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+      <div class="loader_line"></div>
+    </div>
+    <!-- /PRELOADER -->
 
-<body>
-  <!-- PRELOADER -->
-  <div id="preloader">
-    <div class="loader_line"></div>
-  </div>
-  <!-- /PRELOADER -->
-
-  <div class="bg-homeBg min-h-screen dark:bg-homeBg-dark bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
-    <!-- <div class="z-50"> -->
+    <div
+      class="bg-homeBg min-h-screen dark:bg-homeBg-dark bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full"
+    >
+      <!-- <div class="z-50"> -->
       <div class="section-bg">
         <div class="w-full flex justify-between px-4">
-            <!-- website Logo -->
-            <a href="index.html">
-                <img class="img-custom-height" src="images/logo/newlogo.png" alt="logo" />
-            </a>
-            <div class="flex items-center">
-                <!-- dark and light mode toggle -->
-                <button id="theme-toggle" type="button" class="dark-light-btn">
-                    <i id="theme-toggle-dark-icon" class="fa-solid text-xl fa-moon hidden"></i>
-                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
-                </button>
-                <!-- mobile toggle button -->
-                <button id="menu-toggle" type="button" class="menu-toggle-btn">
-                    <i id="menu-toggle-open-icon" class="fa-solid fa-bars text-xl "></i>
-                    <i id="menu-toggle-close-icon" class="fa-solid fa-xmark text-xl hidden  "></i>
-                </button>
-            </div>
+          <!-- website Logo -->
+          <a href="index.html">
+            <img
+              class="img-custom-height"
+              src="images/logo/newlogo.png"
+              alt="logo"
+            />
+          </a>
+          <div class="flex items-center">
+            <!-- dark and light mode toggle -->
+            <button id="theme-toggle" type="button" class="dark-light-btn">
+              <i
+                id="theme-toggle-dark-icon"
+                class="fa-solid text-xl fa-moon hidden"
+              ></i>
+              <i
+                id="theme-toggle-light-icon"
+                class="fa-solid fa-sun text-xl hidden"
+              ></i>
+            </button>
+            <!-- mobile toggle button -->
+            <button id="menu-toggle" type="button" class="menu-toggle-btn">
+              <i
+                id="menu-toggle-open-icon"
+                class="fa-solid fa-bars text-xl"
+              ></i>
+              <i
+                id="menu-toggle-close-icon"
+                class="fa-solid fa-xmark text-xl hidden"
+              ></i>
+            </button>
+          </div>
         </div>
-    </div>
+      </div>
       <!-- mobile menu start -->
       <nav id="navbar" class="hidden lg:hidden">
         <ul
-            class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]">
-            <li>
-                <a class="mobile-menu-items" href="index.html">
-                    <span class="mr-2 text-xl">
-                        <i class="fa-regular fa-user"></i>
-                    </span> About </a>
-            </li>
-            <li>
-                <a class="mobile-menu-items" href="resume.html">
-                    <span class="mr-2 text-xl">
-                        <i class="fa-regular fa-file-lines"></i>
-                    </span> Resume </a>
-            </li>
-            <li>
-                <a class="mobile-menu-items-active" href="portfilo.html">
-                    <span class="mr-2 text-xl">
-                        <i class="fas fa-briefcase"></i>
-                    </span> Works </a>
-            </li>
-            <li>
-                <a class="mobile-menu-items" href="blog.html">
-                    <span class="mr-2 text-xl">
-                        <i class="fa-brands fa-blogger"></i>
-                    </span> Blogs </a>
-            </li>
-            <li>
-                <a class="mobile-menu-items" href="contact.html">
-                    <span class="mr-2 text-xl">
-                        <i class="fa-solid fa-address-book"></i>
-                    </span> Contact </a>
-            </li>
+          class="block rounded-b-[20px] shadow-md absolute left-0 top-20 z-[22222222222222] w-full bg-white dark:bg-[#1d1d1d]"
+        >
+          <li>
+            <a class="mobile-menu-items" href="index.html">
+              <span class="mr-2 text-xl">
+                <i class="fa-regular fa-user"></i>
+              </span>
+              About
+            </a>
+          </li>
+          <li>
+            <a class="mobile-menu-items" href="resume.html">
+              <span class="mr-2 text-xl">
+                <i class="fa-regular fa-file-lines"></i>
+              </span>
+              Resume
+            </a>
+          </li>
+          <li>
+            <a class="mobile-menu-items-active" href="portfilo.html">
+              <span class="mr-2 text-xl">
+                <i class="fas fa-briefcase"></i>
+              </span>
+              Works
+            </a>
+          </li>
+          <li>
+            <a class="mobile-menu-items" href="blog.html">
+              <span class="mr-2 text-xl">
+                <i class="fa-brands fa-blogger"></i>
+              </span>
+              Blogs
+            </a>
+          </li>
+          <li>
+            <a class="mobile-menu-items" href="contact.html">
+              <span class="mr-2 text-xl">
+                <i class="fa-solid fa-address-book"></i>
+              </span>
+              Contact
+            </a>
+          </li>
         </ul>
-    </nav>
-    <!-- mobile menu end -->
+      </nav>
+      <!-- mobile menu end -->
       <!-- container start -->
-      <div class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
+      <div
+        class="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]"
+      >
         <!-- sidber personal info -->
-        <div class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
-            <div
-                class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                <!-- profile image -->
-                <img src="images/about/my avatar.jpg"
-                    class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
-                    alt="about avatar" />
-                <div class="pt-[100px] pb-8">
-                    <h1 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Henok Mekonnen </h1>
-                    <h3
-                        class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]">
-                        Full Stack Web Devloper </h3>
-                    <div class="flex justify-center space-x-3">
-                        <!-- facebook icon and link -->
-                        <a href="https://www.facebook.com/henok.mekonnen5030" target="_blank"
-                            rel="noopener noreferrer">
-                            <span class="socialbtn text-[#1773EA]">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </span>
-                        </a>
-                        <!-- twitter icon and link -->
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                            <span class="socialbtn text-[#1C9CEA]">
-                                <i class="fa-brands fa-twitter"></i>
-                            </span>
-                        </a>
-                        <!-- dribbble icon and link -->
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                            <span class="socialbtn text-[#e14a84]">
-                                <i class="fa-brands fa-dribbble"></i>
-                            </span>
-                        </a>
-                        <!-- linkedin icon and link -->
-                        <a href="https://www.linkedin.com/in/henokmekonnen1/" target="_blank" rel="noopener noreferrer">
-                            <span class="socialbtn text-[#0072b1]">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </span>
-                        </a>
-                    </div>
+        <div
+          class="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44"
+        >
+          <div
+            class="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0"
+          >
+            <!-- profile image -->
+            <img
+              src="images/about/my avatar.jpg"
+              class="w-[240px] absolute left-[50%] transform -translate-x-[50%] h-[240px] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]"
+              alt="about avatar"
+            />
+            <div class="pt-[100px] pb-8">
+              <h1 class="mt-6 mb-1 text-[26px] font-semibold dark:text-white">
+                Henok Mekonnen
+              </h1>
+              <h3
+                class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]"
+              >
+                Full Stack Web Devloper
+              </h3>
+              <div class="flex justify-center space-x-3">
+                <!-- facebook icon and link -->
+                <a
+                  href="https://www.facebook.com/henok.mekonnen5030"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socialbtn text-[#1773EA]">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </span>
+                </a>
+                <!-- twitter icon and link -->
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="socialbtn text-[#1C9CEA]">
+                    <i class="fa-brands fa-twitter"></i>
+                  </span>
+                </a>
+                <!-- dribbble icon and link -->
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <span class="socialbtn text-[#e14a84]">
+                    <i class="fa-brands fa-dribbble"></i>
+                  </span>
+                </a>
+                <!-- linkedin icon and link -->
+                <a
+                  href="https://www.linkedin.com/in/henokmekonnen1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="socialbtn text-[#0072b1]">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </span>
+                </a>
+              </div>
 
-                    <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
-                        <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5">
-                            <span class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md">
-                                <i class="fa-solid fa-mobile-screen-button"></i>
-                            </span>
-                            <div class="text-left ml-2.5">
-                                <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Phone </p>
-                                <p class="dark:text-white">+251917253752</p>
-                            </div>
-                        </div>
-                        <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
-                            <span class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md">
-                                <i class="fa-solid fa-envelope-open-text"></i>
-                            </span>
-                            <div class="text-left ml-2.5">
-                                <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
-                                <p class="dark:text-white">henokmekonnen5@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5">
-                            <span class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </span>
-                            <div class="text-left ml-2.5">
-                                <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Location </p>
-                                <p class="dark:text-white">Addis Ababa, Ethiopia</p>
-                            </div>
-                        </div>
-                        <div class="flex py-2.5">
-                            <span class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md">
-                                <i class="fa-solid fa-calendar-days"></i>
-                            </span>
-                            <div class="text-left ml-2.5">
-                                <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Birthday </p>
-                                <p class="dark:text-white">August 06, 1997</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- dowanload button -->
-                    <button class="dowanload-btn">
-                      <a href="cv/Henok%20Mekonnen%20Resume.pdf" download="Henok_Mekonnen_Resume.pdf">
-                           Download CV
-                      </a> </button>
+              <div class="p-7 rounded-2xl mt-7 bg-[#F3F6F6] dark:bg-[#1D1D1D]">
+                <div
+                  class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] pb-2.5"
+                >
+                  <span
+                    class="socialbtn bg-white dark:bg-black text-[#E93B81] shadow-md"
+                  >
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                  </span>
+                  <div class="text-left ml-2.5">
+                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]">
+                      Phone
+                    </p>
+                    <p class="dark:text-white">+251917253752</p>
+                  </div>
                 </div>
+                <div
+                  class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5"
+                >
+                  <span
+                    class="socialbtn bg-white dark:bg-black text-[#6AB5B9] shadow-md"
+                  >
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                  </span>
+                  <div class="text-left ml-2.5">
+                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]">
+                      Email
+                    </p>
+                    <p class="dark:text-white">henokmekonnen5@gmail.com</p>
+                  </div>
+                </div>
+                <div
+                  class="flex border-b border-[#E3E3E3] dark:border-[#3D3A3A] py-2.5"
+                >
+                  <span
+                    class="socialbtn bg-white dark:bg-black text-[#FD7590] shadow-md"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </span>
+                  <div class="text-left ml-2.5">
+                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]">
+                      Location
+                    </p>
+                    <p class="dark:text-white">Addis Ababa, Ethiopia</p>
+                  </div>
+                </div>
+                <div class="flex py-2.5">
+                  <span
+                    class="socialbtn bg-white dark:bg-black text-[#C17CEB] shadow-md"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </span>
+                  <div class="text-left ml-2.5">
+                    <p class="text-xs text-[#44566C] dark:text-[#A6A6A6]">
+                      Birthday
+                    </p>
+                    <p class="dark:text-white">August 06, 1997</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- dowanload button -->
+              <button class="dowanload-btn">
+                <a
+                  href="cv/Henok%20Mekonnen%20Resume.pdf"
+                  download="Henok_Mekonnen_Resume.pdf"
+                >
+                  Download CV
+                </a>
+              </button>
             </div>
+          </div>
         </div>
-        
+
         <div class="col-span-12 lg:col-span-8">
           <!-- header for mobile devices start -->
           <header
-              class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
-              <nav class="hidden lg:block">
-                  <ul class="flex">
-                      <li> <a class="menu-item" href="index.html">
-                              <span class="text-xl mb-1">
-                                  <i class="fa-regular fa-user"></i>
-                              </span> About </a></li>
-                      <li> <a class="menu-item" href="resume.html">
-                              <span class="text-xl mb-1">
-                                  <i class="fa-regular fa-file-lines"></i>
-                              </span> Resume </a></li>
-                      <li> <a class="menu-active" href="portfilo.html">
-                              <span class="text-xl mb-1">
-                                  <i class="fas fa-briefcase"></i>
-                              </span> Works </a></li>
-                      <li><a class="menu-item" href="blog.html">
-                              <span class="text-xl mb-1">
-                                  <i class="fa-brands fa-blogger"></i>
-                              </span> Blogs </a></li>
-                      <li> <a class="menu-item" href="contact.html">
-                              <span class="text-xl mb-1">
-                                  <i class="fa-solid fa-address-book"></i>
-                              </span> Contact </a></li>
-                  </ul>
-              </nav>
+            class="lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]"
+          >
+            <nav class="hidden lg:block">
+              <ul class="flex">
+                <li>
+                  <a class="menu-item" href="index.html">
+                    <span class="text-xl mb-1">
+                      <i class="fa-regular fa-user"></i>
+                    </span>
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a class="menu-item" href="resume.html">
+                    <span class="text-xl mb-1">
+                      <i class="fa-regular fa-file-lines"></i>
+                    </span>
+                    Resume
+                  </a>
+                </li>
+                <li>
+                  <a class="menu-active" href="portfilo.html">
+                    <span class="text-xl mb-1">
+                      <i class="fas fa-briefcase"></i>
+                    </span>
+                    Works
+                  </a>
+                </li>
+                <li>
+                  <a class="menu-item" href="blog.html">
+                    <span class="text-xl mb-1">
+                      <i class="fa-brands fa-blogger"></i>
+                    </span>
+                    Blogs
+                  </a>
+                </li>
+                <li>
+                  <a class="menu-item" href="contact.html">
+                    <span class="text-xl mb-1">
+                      <i class="fa-solid fa-address-book"></i>
+                    </span>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </header>
           <!-- header for mobile devices start -->
-        <!-- portfolio page contant start -->
-        <section class="bg-white  lg:rounded-2xl dark:bg-[#111111]">
-          <div class="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
-            <div class="py-12">
-              <h2 class="after-effect after:left-48 mt-12 lg:mt-0">Portfolio</h2>
+          <!-- portfolio page contant start -->
+          <section class="bg-white lg:rounded-2xl dark:bg-[#111111]">
+            <div class="container mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
+              <div class="py-12">
+                <h2 class="after-effect after:left-48 mt-12 lg:mt-0">
+                  Portfolio
+                </h2>
 
-              <!-- fillter group buttons -->
-              <!-- <ul
+                <!-- fillter group buttons -->
+                <!-- <ul
                 class="button-group isotop-menu-wrapper mt-[30px] flex w-full justify-start md:justify-end flex-wrap font-medium">
                 <li class="fillter-btn mr-4 md:mx-4 is-checked" data-filter="*">All</li>
                 <li class="fillter-btn mr-4 md:mx-4" data-filter=".dev">Video</li>
@@ -239,651 +337,1297 @@
                 <li class="fillter-btn mr-4 md:mx-4" data-filter=".branding"> Logo</li>
                 <li class="fillter-btn mr-4 md:mx-4" data-filter=".custom">Graphic Design</li>
               </ul> -->
+              </div>
+              <!-- End py-12 -->
+
+              <div
+                id="isotop-gallery-wrapper"
+                class="mymix portfolio_list-two two-col"
+              >
+                <div class="grid-sizer"></div>
+                <!-- portfolio items one start -->
+                <div class="portfolio_list-two-items isotop-item plugin custom">
+                  <div
+                    class="rounded-lg bg-[#fff0f0] p-6 dark:bg-transparent dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloOne" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/pms.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Front-End Developer</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloOne" rel="modal:open"
+                        >Performance Management System
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item one  -->
+                <div id="portfiloOne" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Web Development Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-md mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">NextJs, Redux Toolkit</span>
+                        </p>
+                      </div>
+
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Client :&nbsp;
+                          <span class="font-medium">Ethiopian Airlines</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://successwing.ethiopianairlines.com/auth/login/?from=%2F"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >PMS</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      Our state-of-the-art Employee Performance Management
+                      System, developed using Next.js, is now fully operational.
+                      This cutting-edge system enables organizations to
+                      comprehensively manage and assess the performance of their
+                      workforce. Leveraging the power of Next.js, our solution
+                      ensures a seamless and performant user experience. The
+                      application is built to be Multilingual, allowing users to
+                      interact with the platform in their preferred language,
+                      fostering inclusivity and ease of use across diverse
+                      teams. Furthermore, our system boasts Multi-Tenant
+                      capabilities, providing organizations with the flexibility
+                      to manage multiple business units or clients within a
+                      single instance. This not only streamlines administrative
+                      processes but also enhances scalability and efficiency for
+                      enterprises with diverse operational needs. Experience the
+                      future of employee performance management with our
+                      Next.js-powered, Multilingual, and Multi-Tenant solution.
+                      Elevate your organization's efficiency and effectiveness
+                      in assessing and nurturing employee talent.
+                    </p>
+
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/pms.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items one and one start -->
+                <div class="portfolio_list-two-items isotop-item plugin custom">
+                  <div
+                    class="rounded-lg bg-[#fff0f0] p-6 dark:bg-transparent dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloOnes" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/alpha.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Front-End Developer</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloOnes" rel="modal:open">ALPHA Plus </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item one and one  -->
+                <div id="portfiloOnes" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Web Development Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-md mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">NextJs, Redux Toolkit</span>
+                        </p>
+                      </div>
+
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Client :&nbsp;
+                          <span class="font-medium">Ethiopian Airlines</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://dev.alpha.ethiopianairlines.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >ALPHA</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      The Addis Ababa Layover Passenger Hotel Accommodation
+                      System is a comprehensive solution designed to improve the
+                      layover experience for passengers at Addis Ababa Bole
+                      International Airport. By automating the booking process
+                      and offering a range of accommodation options, the system
+                      ensures that passengers can enjoy a comfortable stay
+                      during their layover, while also benefiting airlines,
+                      airports, and hotels. This system aims to streamline the
+                      process of booking hotel accommodations, ensuring
+                      passengers can easily find and secure a place to stay
+                      during their layover.
+                    </p>
+
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/alpha.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items Eight start -->
+                <div class="portfolio_list-two-items isotop-item dev branding">
+                  <div
+                    class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloEight" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/epro.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Project</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloEight" rel="modal:open">
+                        E-procurement
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item Eight start -->
+                <div id="portfiloEight" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Website Development Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">ReactJs</span>
+                        </p>
+                      </div>
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Client :&nbsp;
+                          <span class="font-medium">Ethiopian</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://eprocurement.ethiopianairlines.com/#/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >E-procurement
+                            </a>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      The E-Procurement System is a purpose-built, web-based
+                      solution designed to streamline and enhance the efficiency
+                      of procurement processes within organizations. This
+                      sophisticated system seamlessly integrates with digital
+                      procurement tools, automating the entire procurement
+                      workflow and ensuring a swift and accurate handling of
+                      procurement requests. Its online nature allows for easy
+                      accessibility, offering enhanced flexibility in ensuring
+                      comprehensive oversight of the electronic procurement
+                      process.
+                    </p>
+
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/epro.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items two start -->
+                <div class="portfolio_list-two-items isotop-item dev branding">
+                  <div
+                    class="rounded-lg bg-[#fff3fc] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloTwo" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/medica.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Full Stack Web Development</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloTwo" rel="modal:open">Medica</a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item two  -->
+                <div id="portfiloTwo" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Web Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-md mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium"
+                            >ReactJs, Ruby on Rails, Figma</span
+                          >
+                        </p>
+                      </div>
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Source :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://github.com/mohashyne/24hour_doctor-front_end"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Code</a
+                            >
+                          </span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://two4hours-doctor-frontend.onrender.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Medica</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      Medica is a modern and dynamic web application designed to
+                      manage and display a directory of doctors and their
+                      reservations. The application offers an intuitive and
+                      user-friendly interface, allowing users to view detailed
+                      information about doctors, as well as to add, update, and
+                      delete doctor records interactively.
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/medica.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items three start -->
+                <div class="portfolio_list-two-items isotop-item plugin">
+                  <div
+                    class="rounded-lg bg-[#fff3fc] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloThree" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/gurama.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Project</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloThree" rel="modal:open">
+                        Gurmayle Digital Solutions
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item three start -->
+                <div id="portfiloThree" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Guramayle Digital Solutions Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">NextJS, Figma</span>
+                        </p>
+                      </div>
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Source :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://github.com/henask12/DigitalCraft-Solutions"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Code</a
+                            >
+                          </span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://digital-craft-solutions.vercel.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Guramayle</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      In crafting this digital masterpiece, we embraced the
+                      philosophy of user-centric design and seamless
+                      functionality. Embark on a transformative digital journey
+                      with our consultancy, specializing in Digital Marketing,
+                      Web Development, and Cybersecurity.
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/gurama.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items four start -->
+                <div class="portfolio_list-two-items isotop-item dev custom">
+                  <div
+                    class="rounded-lg p-6 bg-[#e9faff] dark:bg-transparent dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloFour" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/space.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Project</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloFour" rel="modal:open"
+                        >Space Travelers Hub
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item one start -->
+                <div id="portfiloFour" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Space Travelers Hub Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium"
+                            >ReactJs, TailwindCss, Figma</span
+                          >
+                        </p>
+                      </div>
+
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Source :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://github.com/henask12/space-travelers-hub"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Code</a
+                            >
+                          </span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://space-traveler-hub-qacv.onrender.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Space Travelers</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      A Space Travelers Hub is a web application that serves as
+                      a centralized platform for space enthusiasts, astronauts,
+                      and researchers to access and manage information about
+                      space missions, rockets, and user profiles. It provides a
+                      user-friendly interface where users can explore details
+                      about various space missions, rockets, and maintain their
+                      own profiles. The application is built using modern web
+                      technologies such as React, Redux, and React Router,
+                      allowing for dynamic navigation and seamless user
+                      experiences
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/space.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- modal start for item five start -->
+                <div class="portfolio_list-two-items isotop-item branding">
+                  <div
+                    class="rounded-lg bg-[#fffae9] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloFive" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/dms.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Development</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloFive" rel="modal:open"
+                        >Document Management System</a
+                      >
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item five start -->
+                <div id="portfiloFive" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Document Management System Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">ASP.NET MVC</span>
+                        </p>
+                      </div>
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Client :&nbsp;
+                          <span class="font-medium">Ethiopian</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="http://svdcbas02:8469/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >DMS</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      A Document Management System (DMS) is an Inhouse System
+                      and also sophisticated and centralized software platform
+                      that empowers organizations to efficiently manage their
+                      digital documents throughout their entire lifecycle. From
+                      creation and capture to storage, retrieval, and eventual
+                      disposal, a DMS provides a robust framework for handling
+                      diverse types of documents, including text files,
+                      spreadsheets, images, and multimedia content
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/dms.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items Six start -->
+                <div class="portfolio_list-two-items isotop-item branding">
+                  <div
+                    class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloSix" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/travel.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Development and Integration</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloSix" rel="modal:open">
+                        Travel Document Verification System
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item six start -->
+                <div id="portfiloSix" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Travel Document Verification System Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium"
+                            >ASP.Net MVC, JavaScript</span
+                          >
+                        </p>
+                      </div>
+
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Client :&nbsp;
+                          <span class="font-medium">Ethiopian</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="http://svsfclust01:3157/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >TDVS</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      The In-house Travel Document Verification System is
+                      specifically engineered to elevate the security and
+                      efficiency of passenger processing at airports. This
+                      advanced system seamlessly integrates with passport
+                      scanners, automating the document verification process and
+                      ensuring a swift and accurate validation of passenger
+                      credentials upon entry to the airport. Additionally, a
+                      desktop version of the system is available, providing
+                      increased flexibility and accessibility for conducting
+                      thorough document scrutiny.
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/work_images/6.jpg"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- modal start for item Seven start -->
+                <div class="portfolio_list-two-items isotop-item plugin">
+                  <div
+                    class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloSeven" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/movies.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Development</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloSeven" rel="modal:open">
+                        Movies World
+                      </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item Seven start -->
+                <div id="portfiloSeven" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Web Development Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium"
+                            >JavaScript, HTML5, CSS</span
+                          >
+                        </p>
+                      </div>
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Source :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://github.com/henask12/JavaScript-Capstone"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Code</a
+                            >
+                          </span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://henask12.github.io/JavaScript-Capstone/dist/index.html"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >MoviesWorld</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      [MovieWorld] is an application that renders Tv Shows from
+                      TVMaze API and also has features like fetching and posting
+                      comments and Likes using the Involvment API. This is a
+                      collaborative project where we have applied all the skills
+                      obtained throughout the javascript module.
+                    </p>
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/movies.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+
+                <!-- portfolio items Nine start -->
+                <div class="portfolio_list-two-items isotop-item plugin custom">
+                  <div
+                    class="rounded-lg bg-[#fff0f8] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]"
+                  >
+                    <div class="overflow-hidden rounded-lg">
+                      <a href="#portfiloNine" rel="modal:open">
+                        <img
+                          class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                          src="images/portfolio/carvert.png"
+                          alt="portfolio image"
+                        />
+                      </a>
+                    </div>
+                    <span
+                      class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]"
+                      >Web Design and Development</span
+                    >
+                    <h2
+                      class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2"
+                    >
+                      <a href="#portfiloNine" rel="modal:open"> Carvertise </a>
+                    </h2>
+                  </div>
+                </div>
+
+                <!-- modal start for item Nine start -->
+                <div id="portfiloNine" class="modal-container modal">
+                  <div
+                    class="overflow-y-scroll scroll-hide-1700 max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight"
+                  >
+                    <h2
+                      class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+                    >
+                      Carvertise Web Project
+                    </h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"
+                          ></i>
+                          Project :&nbsp;
+                          <span class="font-medium"> Website</span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-code text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Langages :&nbsp;
+                          <span class="font-medium">ReactJs, Figma</span>
+                        </p>
+                      </div>
+
+                      <div class="space-y-2">
+                        <p
+                          class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-regular fa-user text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Source :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://github.com/henask12/carvertise-client"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Code</a
+                            >
+                          </span>
+                        </p>
+                        <p
+                          class="dark:text-white flex items-center text-[15px] sm:text-lg"
+                        >
+                          <i
+                            class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"
+                          ></i>
+                          Preview :&nbsp;
+                          <span
+                            class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+                          >
+                            <a
+                              href="https://carvertise.onrender.com/#"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Carvertise</a
+                            >
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+
+                    <p
+                      class="dark:text-white text-2line font-normal text-[15px] sm:text-sm"
+                    >
+                      Carvertise Project is a personal venture, meticulously
+                      crafted to bring innovative solutions to the realm of
+                      vehicular advertising. This project revolves around a
+                      web-based platform that seamlessly connects advertisers
+                      with vehicle owners, transforming ordinary cars into
+                      mobile advertising spaces. The system automates the
+                      process of campaign management, ensuring a smooth and
+                      efficient workflow for both advertisers and vehicle
+                      owners. With a focus on online accessibility, this
+                      personal project offers a user-friendly experience, making
+                      carvertising opportunities readily available for all
+                      interested parties.
+                    </p>
+
+                    <div class="pr-3">
+                      <img
+                        class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
+                        src="images/portfolio/carvert.png"
+                        alt="portfolio image"
+                      />
+                    </div>
+                  </div>
+                  <a
+                    href="#close-modal"
+                    rel="modal:close"
+                    class="close bg-close-light dark:bg-close-dark"
+                    >Close</a
+                  >
+                </div>
+              </div>
             </div>
-            <!-- End py-12 -->
 
-            <div id="isotop-gallery-wrapper" class="mymix portfolio_list-two  two-col">
-              <div class="grid-sizer"></div>
-              <!-- portfolio items one start -->
-              <!-- <div class="portfolio_list-two-items isotop-item plugin custom ">
-                <div class="rounded-lg bg-[#fff0f0] p-6 dark:bg-transparent dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloOne" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/pms.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Front-End Developer</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloOne" rel="modal:open">Performance Management System </a>
-                  </h2>
-                </div>
-              </div> -->
-
-              <!-- modal start for item one  -->
-              <!-- <div id="portfiloOne" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Web Development Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-md mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">NextJs, Redux Toolkit</span>
-                      </p>
-                    </div>
-
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Client :&nbsp; <span class="font-medium">Ethiopian Airlines</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://successwing.ethiopianairlines.com/auth/login/?from=%2F" target="_blank" rel="noopener noreferrer">PMS</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    Our state-of-the-art Employee Performance Management System, developed using Next.js, is now fully operational. This cutting-edge system enables organizations to comprehensively manage and assess the performance of their workforce.
-                  
-                    Leveraging the power of Next.js, our solution ensures a seamless and performant user experience. The application is built to be Multilingual, allowing users to interact with the platform in their preferred language, fostering inclusivity and ease of use across diverse teams.
-                  
-                    Furthermore, our system boasts Multi-Tenant capabilities, providing organizations with the flexibility to manage multiple business units or clients within a single instance. This not only streamlines administrative processes but also enhances scalability and efficiency for enterprises with diverse operational needs.
-                  
-                    Experience the future of employee performance management with our Next.js-powered, Multilingual, and Multi-Tenant solution. Elevate your organization's efficiency and effectiveness in assessing and nurturing employee talent.
-                  </p>
-                  
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/pms.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div> -->
-
-              <!-- portfolio items two start -->
-              <div class="portfolio_list-two-items isotop-item dev branding ">
-                <div class="rounded-lg bg-[#fff3fc] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloTwo" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/medica.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Full Stack Web Development</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloTwo" rel="modal:open">Medica</a>
-                  </h2>
-                </div>
-              </div>
-
-              <!-- modal start for item two  -->
-              <div id="portfiloTwo" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Web Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-md mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ReactJs, Ruby on Rails, Figma</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Source :&nbsp; <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://github.com/mohashyne/24hour_doctor-front_end" target="_blank" rel="noopener noreferrer">Code</a>
-                        </span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://two4hours-doctor-frontend.onrender.com/" target="_blank" rel="noopener noreferrer">Medica</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    Medica is a modern and dynamic web application designed to manage and display a directory of doctors and their reservations. The application offers an intuitive and user-friendly interface, allowing users to view detailed information about doctors, as well as to add, update, and delete doctor records interactively.
-                  </p>
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/medica.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div>
-
-              <!-- portfolio items three start -->
-              <div class="portfolio_list-two-items isotop-item plugin ">
-                <div class="rounded-lg bg-[#fff3fc] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloThree" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/gurama.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Project</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloThree" rel="modal:open">
-                      Gurmayle Digital Solutions
-                    </a>
-                  </h2>
-                </div>
-              </div>
-
-              <!-- modal start for item three start -->
-              <div id="portfiloThree" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Guramayle Digital Solutions Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">NextJS, Figma</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Source :&nbsp;  <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://github.com/henask12/DigitalCraft-Solutions" target="_blank" rel="noopener noreferrer">Code</a>
-                        </span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://digital-craft-solutions.vercel.app/" target="_blank" rel="noopener noreferrer">Guramayle</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    In crafting this digital masterpiece, we embraced the philosophy of user-centric design and seamless functionality.
-                    Embark on a transformative digital journey with our consultancy, specializing in Digital Marketing, Web Development, and Cybersecurity.
-                  </p>
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/gurama.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div>
-
-              <!-- portfolio items four start -->
-              <div class="portfolio_list-two-items isotop-item dev custom ">
-                <div class="rounded-lg p-6 bg-[#e9faff] dark:bg-transparent dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloFour" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/space.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Project</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloFour" rel="modal:open">Space Travelers Hub
-                    </a>
-                  </h2>
-                </div>
-              </div>
-
-              <!-- modal start for item one start -->
-              <div id="portfiloFour" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Space Travelers Hub Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ReactJs, TailwindCss, Figma</span>
-                      </p>
-                    </div>
-
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Source :&nbsp;  <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://github.com/henask12/space-travelers-hub" target="_blank" rel="noopener noreferrer">Code</a>
-                        </span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://space-traveler-hub-qacv.onrender.com/" target="_blank" rel="noopener noreferrer">Space Travelers</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    A Space Travelers Hub is a web application that serves as a centralized platform for space enthusiasts, astronauts, and researchers to access and manage information about space missions, rockets, and user profiles. It provides a user-friendly interface where users can explore details about various space missions, rockets, and maintain their own profiles. The application is built using modern web technologies such as React, Redux, and React Router, allowing for dynamic navigation and seamless user experiences
-                  </p>
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/space.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div>
-
-              <!-- modal start for item five start -->
-              <!-- <div class="portfolio_list-two-items isotop-item branding ">
-                <div class="rounded-lg bg-[#fffae9] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloFive" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/dms.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Development</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloFive" rel="modal:open">Document Management System</a>
-                  </h2>
-                </div>
-              </div> -->
-
-              <!-- modal start for item five start -->
-              <!-- <div id="portfiloFive" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Document Management System Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ASP.NET MVC</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Client :&nbsp; <span class="font-medium">Ethiopian</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="http://svdcbas02:8469/" target="_blank" rel="noopener noreferrer">DMS</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    A Document Management System (DMS) is an Inhouse System and also sophisticated and centralized software platform that empowers organizations to efficiently manage their digital documents throughout their entire lifecycle. From creation and capture to storage, retrieval, and eventual disposal, a DMS provides a robust framework for handling diverse types of documents, including text files, spreadsheets, images, and multimedia content
-                  </p>
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/dms.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div> -->
-
-              <!-- portfolio items Six start -->
-              <!-- <div class="portfolio_list-two-items isotop-item branding ">
-                <div class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloSix" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/travel.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Development and Integration</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloSix" rel="modal:open">
-                      Travel Document Verification System
-                    </a>
-                  </h2>
-                </div>
-              </div> -->
-
-              <!-- modal start for item six start -->
-              <!-- <div id="portfiloSix" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Travel Document Verification System Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ASP.Net MVC, JavaScript</span>
-                      </p>
-
-                    </div>
-
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Client :&nbsp; <span class="font-medium">Ethiopian</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="http://svsfclust01:3157/" target="_blank" rel="noopener noreferrer">TDVS</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    The In-house Travel Document Verification System is specifically engineered to elevate the security and efficiency of passenger processing at airports. This advanced system seamlessly integrates with passport scanners, automating the document verification process and ensuring a swift and accurate validation of passenger credentials upon entry to the airport. Additionally, a desktop version of the system is available, providing increased flexibility and accessibility for conducting thorough document scrutiny.
-                  </p>                  
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/work_images/6.jpg"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div> -->
-
-              <!-- modal start for item Seven start -->
-              <div class="portfolio_list-two-items isotop-item plugin ">
-                <div class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloSeven" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/movies.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Development</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloSeven" rel="modal:open"> Movies World </a>
-                  </h2>
-                </div>
-              </div>
-
-              <!-- modal start for item Seven start -->
-              <div id="portfiloSeven" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Web Development Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">JavaScript, HTML5, CSS</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Source :&nbsp;  <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://github.com/henask12/JavaScript-Capstone" target="_blank" rel="noopener noreferrer">Code</a>
-                        </span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://henask12.github.io/JavaScript-Capstone/dist/index.html" target="_blank" rel="noopener noreferrer">MoviesWorld</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    [MovieWorld] is an application that renders Tv Shows from TVMaze API and also has features like fetching and posting comments and Likes using the Involvment API.
-                    This is a collaborative project where we have applied all the skills obtained throughout the javascript module.
-                  </p>
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/movies.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div>
-
-              <!-- portfolio items Eight start -->
-              <!-- <div class="portfolio_list-two-items isotop-item dev branding ">
-                <div class="rounded-lg bg-[#f4f4ff] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloEight" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/epro.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Project</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloEight" rel="modal:open"> E-procurement </a>
-                  </h2>
-                </div>
-              </div> -->
-
-              <!-- modal start for item Eight start -->
-              <!-- <div id="portfiloEight" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Website Development Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ReactJs</span>
-                      </p>
-                    </div>
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Client :&nbsp; <span class="font-medium">Ethiopian</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://eprocurement.ethiopianairlines.com/#/" target="_blank" rel="noopener noreferrer">E-procurement </a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    The E-Procurement System is a purpose-built, web-based solution designed to streamline and enhance the efficiency of procurement processes within organizations. 
-                    This sophisticated system seamlessly integrates with digital procurement tools, automating the entire procurement workflow and ensuring a swift and accurate handling
-                     of procurement requests. Its online nature allows for easy accessibility, offering enhanced flexibility in ensuring comprehensive oversight of the 
-                     electronic procurement process.
-                  </p>
-                  
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/epro.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div> -->
-
-
-              <!-- portfolio items Nine start -->
-              <div class="portfolio_list-two-items isotop-item plugin custom ">
-                <div class="rounded-lg bg-[#fff0f8] dark:bg-transparent p-6 dark:border-[2px] border-[#212425]">
-                  <div class="overflow-hidden rounded-lg">
-                    <a href="#portfiloNine" rel="modal:open">
-                      <img
-                        class="w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
-                        src="images/portfolio/carvert.png" alt="portfolio image" />
-                    </a>
-                  </div>
-                  <span class="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">Web Design and Development</span>
-                  <h2
-                    class="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-                    <a href="#portfiloNine" rel="modal:open"> Carvertise </a>
-                  </h2>
-                </div>
-              </div>
-
-              <!-- modal start for item Nine start -->
-              <div id="portfiloNine" class="modal-container modal">
-                <div
-                  class="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
-                  <h2 class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-                    Carvertise Web Project
-                  </h2>
-                  <div class="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
-                        Project :&nbsp;
-                        <span class="font-medium"> Website</span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
-                        Langages :&nbsp;
-                        <span class="font-medium">ReactJs, Figma</span>
-                      </p>
-                    </div>
-
-                    <div class="space-y-2">
-                      <p class="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
-                        <i class="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                        Source :&nbsp; <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://github.com/henask12/carvertise-client" target="_blank" rel="noopener noreferrer">Code</a>
-                        </span>
-                      </p>
-                      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-lg mr-2 hidden sm:block"></i>
-                        Preview :&nbsp;
-                        <span class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                          <a href="https://carvertise.onrender.com/#" target="_blank" rel="noopener noreferrer">Carvertise</a>
-                        </span>
-                      </p>
-                    </div>
-                  </div>
-
-                  <p class="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-                    Carvertise Project is a personal venture, meticulously crafted to bring innovative solutions to the realm of vehicular advertising.
-                     This project revolves around a web-based platform that seamlessly connects advertisers with vehicle owners,
-                      transforming ordinary cars into mobile advertising spaces. The system automates the process of campaign management,
-                       ensuring a smooth and efficient workflow for both advertisers and vehicle owners. With a focus on online accessibility, 
-                       this personal project offers a user-friendly experience, making carvertising opportunities readily available for all interested parties.
-                  </p>
-                  
-                  <div class="pr-3">
-                    <img class="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6" src="images/portfolio/carvert.png"
-                      alt="portfolio image" />
-                  </div>
-                </div>
-                <a href="#close-modal" rel="modal:close" class="close bg-close-light dark:bg-close-dark">Close</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- footer start -->
-          <footer class="overflow-hidden rounded-b-2xl" style="background: transparent;">
-            <p class="text-center py-6 text-gray-lite dark:text-color-910"> © 2023 All Rights Reserved
-              by <a class="hover:text-[#FA5252] duration-300 transition" href="#" target="_blank"
-                rel="noopener noreferrer">Henok Mekonnen</a>. </p>
-          </footer>
-          <!-- footer ends -->
-        </section>
-        <!-- portfolio ends  -->
+            <!-- footer start -->
+            <footer
+              class="overflow-hidden rounded-b-2xl"
+              style="background: transparent"
+            >
+              <p class="text-center py-6 text-gray-lite dark:text-color-910">
+                © 2023 All Rights Reserved by
+                <a
+                  class="hover:text-[#FA5252] duration-300 transition"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Henok Mekonnen</a
+                >.
+              </p>
+            </footer>
+            <!-- footer ends -->
+          </section>
+          <!-- portfolio ends  -->
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <!--=== js ===-->
-  <script src="js/vendor/jquary.min.js"></script>
-  <script src="js/vendor/jquery.modal.min.js"></script>
-  <script src="js/vendor/isotope.pkgd.min.js"></script>
-  <!--=== main js  ===-->
-  <script src="js/main.js"></script>
-
-
-</body>
-
+    <!--=== js ===-->
+    <script src="js/vendor/jquary.min.js"></script>
+    <script src="js/vendor/jquery.modal.min.js"></script>
+    <script src="js/vendor/isotope.pkgd.min.js"></script>
+    <!--=== main js  ===-->
+    <script src="js/main.js"></script>
+  </body>
 </html>
